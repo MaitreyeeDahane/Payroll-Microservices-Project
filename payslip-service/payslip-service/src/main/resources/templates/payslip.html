@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Payslip Result</title>
+
+    <style>
+
+    body{
+        font-family: Arial, sans-serif;
+        background: linear-gradient(to right, #500014, #2a5298);
+        text-align: center;
+        padding-top: 50px;
+        margin: 0;
+    }
+
+    .container{
+        background: white;
+        width: 550px;
+        margin: auto;
+        padding: 35px;
+        border-radius: 15px;
+        box-shadow: 0px 5px 20px rgba(0,0,0,0.3);
+    }
+
+    h1{
+        color: #1e3c72;
+        margin-bottom: 25px;
+    }
+
+    table{
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    td{
+        padding: 14px;
+        border: 1px solid #ccc;
+        font-size: 16px;
+    }
+
+    tr:nth-child(even){
+        background-color: #f2f2f2;
+    }
+
+    tr:hover{
+        background-color: #d6e4ff;
+    }
+    
+    .back-btn{
+
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #500014;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.back-btn:hover{
+
+    background-color: #500014;
+    transform: scale(1.05);
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Employee Payslip</h1>
+
+    <table>
+
+        <tr>
+            <td>Employee ID</td>
+            <td th:text="${payslip.employeeId}"></td>
+        </tr>
+
+        <tr>
+            <td>Employee Name</td>
+            <td th:text="${payslip.employeeName}"></td>
+        </tr>
+
+        <tr>
+            <td>Basic Salary</td>
+            <td th:text="${payslip.basicSalary}"></td>
+        </tr>
+
+        <tr>
+            <td>Present Days</td>
+            <td th:text="${payslip.presentDays}"></td>
+        </tr>
+
+        <tr>
+            <td>Final Salary</td>
+            <td th:text="${payslip.finalSalary}"></td>
+        </tr>
+
+    </table>
+    
+    <br><br>
+
+<br><br>
+
+<a href="/" class="back-btn">
+    Generate Another Payslip
+</a>>
+
+</div>
+
+</body>
+</html>

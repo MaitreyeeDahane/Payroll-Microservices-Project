@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Payslip Generator</title>
+
+    <style>
+
+    body{
+        font-family: Arial, sans-serif;
+        background: linear-gradient(to right, #500014, #2a5298);
+        text-align: center;
+        padding-top: 60px;
+        margin: 0;
+    }
+
+    .container{
+        background: white;
+        width: 420px;
+        margin: auto;
+        padding: 35px;
+        border-radius: 15px;
+        box-shadow: 0px 5px 20px rgba(0,0,0,0.3);
+    }
+
+    h1{
+        color: #1e3c72;
+        margin-bottom: 10px;
+    }
+
+    p{
+        color: gray;
+        margin-bottom: 25px;
+    }
+
+    input{
+        width: 80%;
+        padding: 12px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        border: 1px solid gray;
+        font-size: 15px;
+    }
+
+    button{
+        padding: 12px 25px;
+        background-color: #500014;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    button:hover{
+        background-color: #500014;
+    }
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Employee Payslip Generator</h1>
+<p>Microservice Based Payroll System</p>
+    <form action="/viewPayslip" method="get">
+
+        <input type="number"
+               name="id"
+               placeholder="Enter Employee ID"
+               required>
+
+        <br>
+
+        <button type="submit">
+            Generate Payslip
+        </button>
+
+    </form>
+
+</div>
+
+</body>
+</html>
